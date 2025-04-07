@@ -28,20 +28,20 @@ const About = ({theme}) => {
 
   return (
     <div
-  ref={aboutRef}
-  id="aboutSection"
-  className={`transition-opacity duration-1000 ${
-    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-  } mt-16 pt-6 pb-4 lg:mb-35 px-4 sm:px-6 lg:px-8`}
->
-  <div className="mt-32 max-w-7xl mx-auto">
-  <h1
-  className={`${
-    theme === "dark" ? "text-neutral-100" : "text-gray-500"
-  } text-xl lg:text-6xl text-center font-bold mb-12`}
->
+      ref={aboutRef}
+      id="aboutSection"
+      className={`transition-opacity duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      } mt-16 pt-6 pb-4 lg:mb-35 px-4 sm:px-6 lg:px-8`}
+    >
+    <div className="mt-32 max-w-7xl mx-auto">
+    <h1
+      className={`${
+        theme === "dark" ? "text-neutral-300" : "text-gray-500"
+      } text-xl lg:text-6xl text-center font-bold mb-12`}
+    >
   About Me
-</h1>
+    </h1>
 
     <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-8">
       {/* Text */}
