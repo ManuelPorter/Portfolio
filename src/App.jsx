@@ -4,10 +4,10 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Technologies from "./components/Technologies";
 import Experience from "./components/Experience";
-import { TsSvg } from "./components/anim/tsSvg";
+import { RedSvg } from "./components/anim/redSvg";
 import { ReaSvg } from "./components/anim/reaSvg";
-import { NexSvg } from "./components/anim/nexSvg";
-import { NesSvg } from "./components/anim/nesSvg";
+import { JavSvg } from "./components/anim/javSvg";
+import { SprSvg } from "./components/anim/sprSvg";
 
 const App = () => {
   const [theme, setTheme] = useState("dark");
@@ -49,10 +49,11 @@ const App = () => {
       <div>
       <Technologies theme={theme}/>
       <div className="flex justify-center flex-wrap items-center">
-      <TsSvg width={150} height={150} />
       <ReaSvg width={150} height={150} />
-      <NexSvg width={150} height={150} />
-      <NesSvg width={150} height={150} />
+      <RedSvg width={150} height={150} />
+      <JavSvg width={150} height={150} />
+      <SprSvg width={150} height={150} />
+      
       </div>
       </div>
       <div >
