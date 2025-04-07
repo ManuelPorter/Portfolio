@@ -4,7 +4,7 @@ import project3 from "../assets/projects/3-ecomerce-product-page.webp";
 import project4 from "../assets/projects/4-blogging-platform.png";
 import project5 from "../assets/projects/5-finance tracker-app.webp";
 
-export const HERO_CONTENT = `I'm a passionate and dedicated software developer with a focus on creating dynamic and user-friendly web applications. My expertise lies in React, a powerful JavaScript library for building complex UI interfaces. I'm excited about leveraging my skills to build innovative solutions and contribute to cutting-edge projects.`;
+export const HERO_CONTENT = `I'm a passionate software engineer specializing in building dynamic web applications using React, Java, and Spring Framework. I enjoy creating clean, efficient solutions and bringing ideas to life.`
 
 export const ABOUT_TEXT = `I'm a tech enthusiast with a keen interest in crafting exceptional digital experiences. My journey as a React developer has ignited a passion for building responsive and interactive web applications. I'm always eager to learn and grow, and I'm excited to collaborate with talented teams to bring creative ideas to life`;
 
