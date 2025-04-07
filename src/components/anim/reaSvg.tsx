@@ -1,6 +1,6 @@
 import * as React from "react";
 import { SVGProps } from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 export const ReaSvg = (props: SVGProps<SVGSVGElement>) => (
   <motion.svg
     width="150px" // Adjust the size as needed
