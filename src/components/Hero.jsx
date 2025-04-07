@@ -14,9 +14,15 @@ const Hero = ({ theme }) => {
             >
               Manuel Porter
             </h1>
-            <span className={`${theme === "dark" ? "bg-gradient-to-r from-blue-500 via-slate-500 to-slate-300" : "bg-gradient-to-r from-blue-500 via-slate-500 to-slate-700"} bg-clip-text text-2xl lg:text-4xl tracking-tight text-transparent`}>
-              React Developer
-            </span>
+            <span
+             className={`${
+              theme === "dark"
+                ? "bg-gradient-to-r from-blue-500 via-slate-500 to-orange-400"
+                : "bg-gradient-to-r from-blue-500 via-slate-500 to-orange-500"
+            } bg-clip-text text-2xl lg:text-4xl tracking-tight text-transparent`}
+            >
+            Full-Stack Java Developer
+           </span>
             <img
           className="mt-5 rounded-full mx-auto w-1/4 h-auto justify-center items-center 
                     transition-all duration-300 cursor-pointer filter grayscale 
