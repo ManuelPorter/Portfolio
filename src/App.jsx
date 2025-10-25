@@ -55,32 +55,38 @@ const App = () => {
 
       {/* Navbar and Content */}
       <div className="absolute z-10">
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
+        <Navbar theme={theme} toggleTheme={toggleTheme} />
       </div>
-      <div className="w-full">
-        <Hero theme={theme} />
-      </div>
-      <About theme={theme} />
 
-      <div>
-      <Technologies theme={theme}/>
-      <div className="flex justify-center flex-wrap items-center">
-      <ReaSvg width={150} height={150} />
-      <RedSvg width={150} height={150} />
-      <JavSvg width={150} height={150} />
-      <SprSvg width={150} height={150} />
-      
-      </div>
-      </div>
-      <div >
-      <Experience theme={theme} />
-      </div>
-      <div>
-      <Projects theme={theme} />
-      </div>
-  <div>
-  <Contact theme={theme} />
-  </div>
+      {/* Main content landmark for skip link */}
+      <main id="main">
+        <div className="w-full">
+          <Hero theme={theme} />
+        </div>
+        <About theme={theme} />
+
+        <div>
+          <Technologies theme={theme} />
+          <div className="flex justify-center flex-wrap items-center">
+            <ReaSvg width={150} height={150} />
+            <RedSvg width={150} height={150} />
+            <JavSvg width={150} height={150} />
+            <SprSvg width={150} height={150} />
+          </div>
+        </div>
+
+        <div>
+          <Experience theme={theme} />
+        </div>
+
+        <div>
+          <Projects theme={theme} />
+        </div>
+
+        <div>
+          <Contact theme={theme} />
+        </div>
+      </main>
     </div>
   );
 };

@@ -8,23 +8,24 @@ const About = ({theme}) => {
     const aboutRef = useRef(null);
   
     useEffect(() => {
-      const handleScroll = () => {
-        if (!aboutRef.current) return;
-  
-        const rect = aboutRef.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-  
-        if (rect.top < windowHeight && rect.bottom >= 0) {
-          setIsVisible(true); // Show when in view
-        } else {
-          setIsVisible(false); // Hide when out of view
-        }
+      const node = aboutRef.current;
+      if (!node) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            setIsVisible(entry.isIntersecting);
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      observer.observe(node);
+
+      return () => {
+        if (node) observer.unobserve(node);
+        observer.disconnect();
       };
-  
-      window.addEventListener("scroll", handleScroll);
-      handleScroll(); // Check visibility on load
-  
-      return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
   return (
@@ -56,6 +57,7 @@ const About = ({theme}) => {
 
       {/* Image */}
       <img
+        loading="lazy"
         className="w-48 h-48 lg:w-64 lg:h-64 rounded-sm object-cover"
         src={prof}
         alt="profile"

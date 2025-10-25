@@ -10,23 +10,24 @@ const Experience = ({theme}) => {
     const experienceRef = useRef(null);
   
     useEffect(() => {
-      const handleScroll = () => {
-        if (!experienceRef.current) return;
-  
-        const rect = experienceRef.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-  
-        if (rect.top < windowHeight && rect.bottom >= 0) {
-          setIsVisible(true); // Show when in view
-        } else {
-          setIsVisible(false); // Hide when out of view
-        }
+      const node = experienceRef.current;
+      if (!node) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            setIsVisible(entry.isIntersecting);
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      observer.observe(node);
+
+      return () => {
+        if (node) observer.unobserve(node);
+        observer.disconnect();
       };
-  
-      window.addEventListener("scroll", handleScroll);
-      handleScroll(); // Check visibility on load
-  
-      return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
   return (
@@ -75,16 +76,19 @@ const Experience = ({theme}) => {
       </div>
       <div className="flex flex-wrap items-center justify-center gap-6">
          <img
+            loading="lazy"
             className="w-1/2 sm:w-1/3 max-w-xs h-auto"
             src={tcs}
             alt="tcs"
           />
           <img
+            loading="lazy"
             className="w-1/2 sm:w-1/3 max-w-xs h-auto"
             src={jabil}
             alt="jabil"
           />
           <img
+            loading="lazy"
             className="w-1/2 sm:w-1/3 max-w-xs h-auto"
             src={kms}
             alt="kms"

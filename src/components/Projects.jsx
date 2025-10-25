@@ -12,7 +12,7 @@ const Projects = ({ theme }) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {PROJECTS.map((p, idx) => (
             <article key={idx} className={`rounded overflow-hidden shadow-md ${theme === 'dark' ? 'bg-neutral-800' : 'bg-white'}`}>
-              <img loading="lazy" src={p.image} alt={`${p.title} thumbnail`} className="w-full h-40 sm:h-48 object-cover" />
+              <img loading="lazy" src={p.image} alt={`${p.title} thumbnail`} className="w-full h-48 object-cover" />
               <div className="p-4">
                 <h3 className={`${theme === 'dark' ? 'text-white' : 'text-gray-900'} text-xl font-semibold mb-2`}>{p.title}</h3>
                 <p className={`${theme === 'dark' ? 'text-neutral-300' : 'text-gray-600'} text-sm mb-3`}>{p.description}</p>

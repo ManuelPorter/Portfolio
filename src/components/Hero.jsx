@@ -25,9 +25,10 @@ const Hero = ({ theme }) => {
         </span>
 
         <img
+          loading="lazy"
           className="mt-4 mb-6 rounded-full w-32 sm:w-40 md:w-48 lg:w-56 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
           src={about}
-          alt="about"
+          alt="Profile photo of Manuel Porter"
         />
 
         <p
