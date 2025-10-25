@@ -1,6 +1,7 @@
 import { EXPERIENCES } from "../constants";
 import tcs from "../assets/tcs.png";
 import jabil from "../assets/jabil.png";
+import kms from "../assets/kms.png";
 import { useState, useEffect, useRef } from "react";
 import PropTypes from 'prop-types';
 
@@ -72,16 +73,21 @@ const Experience = ({theme}) => {
           
         </div>
       </div>
-      <div className="flex flex-wrap items-center justify-center">
+      <div className="flex flex-wrap items-center justify-center gap-6">
          <img
-            className="w-1/3 max-w-xs h-auto"
+            className="w-1/2 sm:w-1/3 max-w-xs h-auto"
             src={tcs}
             alt="tcs"
           />
           <img
-            className="w-1/2 max-w-xs h-auto"
+            className="w-1/2 sm:w-1/3 max-w-xs h-auto"
             src={jabil}
             alt="jabil"
+          />
+          <img
+            className="w-1/2 sm:w-1/3 max-w-xs h-auto"
+            src={kms}
+            alt="kms"
           />
         </div>
     </div>

@@ -10,7 +10,14 @@ export const ABOUT_TEXT = `I'm a tech enthusiast with a keen interest in craftin
 
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
+    year: "2025 - Present",
+    role: "Java Fullstack Engineer",
+    company: "KMS Technology",
+    description: `Specializing in React and Java servlets and Spring, focusing on troubleshooting and improvement of client's application used by thousands of users in the financial and investments sector. Combined Java and Spring to improve a microservices application. Collaborated with cross-functional teams to create visually appealing and highly functional user interfaces that adhered to design and performance requirements in the backend as well.`,
+    technologies: ["Java", "Spring", "React", "Microservices", "Servlets"],
+  },
+  {
+    year: "2023 - 2025",
     role: "React developer",
     company: "TCS",
     description: `Specializing in TypeScript, focusing on building dynamic, user-friendly, and scalable web applications. Combined React’s component-driven architecture with TypeScript’s static typing to deliver robust, maintainable code. Collaborated with cross-functional teams to create visually appealing and highly functional user interfaces that adhered to design and performance requirements.`,
