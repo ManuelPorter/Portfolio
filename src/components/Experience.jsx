@@ -1,7 +1,8 @@
 import { EXPERIENCES } from "../constants";
 import tcs from "../assets/tcs.png";
 import jabil from "../assets/jabil.png";
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import PropTypes from 'prop-types';
 
 const Experience = ({theme}) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -88,3 +89,7 @@ const Experience = ({theme}) => {
 };
 
 export default Experience
+
+Experience.propTypes = {
+  theme: PropTypes.string,
+};

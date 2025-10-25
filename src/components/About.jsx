@@ -1,6 +1,7 @@
 import { ABOUT_TEXT } from "../constants";
 import prof from "../assets/profile1.jpg";
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import PropTypes from 'prop-types';
 
 const About = ({theme}) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -66,4 +67,8 @@ const About = ({theme}) => {
 };
 
 export default About
+
+About.propTypes = {
+  theme: PropTypes.string,
+};
 

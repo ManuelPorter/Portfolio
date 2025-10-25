@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -13,8 +13,18 @@ const App = () => {
   const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme") || "dark";
+    // Safely read theme from localStorage (may be unavailable in some browsers)
+    let storedTheme = 'dark';
+    try {
+      const t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') storedTheme = t;
+    } catch {
+      // ignore localStorage errors
+    }
+
     setTheme(storedTheme);
+    // Ensure we have only the correct theme class on <html>
+    document.documentElement.classList.remove(storedTheme === 'dark' ? 'light' : 'dark');
     document.documentElement.classList.add(storedTheme);
   }, []);
 
@@ -23,7 +33,11 @@ const App = () => {
     setTheme(newTheme);
     document.documentElement.classList.remove(theme);
     document.documentElement.classList.add(newTheme);
-    localStorage.setItem("theme", newTheme);
+    try {
+      localStorage.setItem('theme', newTheme);
+    } catch {
+      // ignore write errors
+    }
   };
 
   return (

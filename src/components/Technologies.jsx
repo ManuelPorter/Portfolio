@@ -1,5 +1,7 @@
 
 
+import PropTypes from 'prop-types';
+
 const Technologies = ({theme}) => {
   return (
     <div>
@@ -17,3 +19,7 @@ const Technologies = ({theme}) => {
 }
 
 export default Technologies;
+
+Technologies.propTypes = {
+  theme: PropTypes.string,
+};
