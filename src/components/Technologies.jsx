@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Technologies = ({theme}) => {
   return (
-    <div>
+    <div id="technologiesSection">
       <h1 className={`${theme==='dark' ? 'text-neutral-200' : 'text-gray-500'} mt-64 pb-24 text-2xl lg:text-4xl text-center items-center justify-center `}>
         Technologies
       </h1>
