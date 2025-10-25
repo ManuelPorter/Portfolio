@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import logo from "../assets/logo.png";
 import {FaLinkedin} from "react-icons/fa";
 import {FaGithub} from "react-icons/fa";
@@ -13,25 +13,21 @@ const Navbar = ({ toggleTheme, theme }) => {
         {/* Left: Menu Icon */}
         <div id="menuAndToogle" className="flex items-center gap-4">
           <TiThMenuOutline className="text-3xl fill-white hover:fill-slate-400 cursor-pointer" />
-        {/* Theme Toggle */}
-        {theme === "dark" ? (
-            <CiLight
-              onClick={toggleTheme}
-              className="text-3xl cursor-pointer text-white hover:text-gray-400"
-              title="Switch to Light Mode"
-            />
-          ) : (
-            <CiDark
-              onClick={toggleTheme}
-              className="text-3xl cursor-pointer text-white hover:text-gray-400"
-              title="Switch to Dark Mode"
-            />
-          )}
+        {/* Theme Toggle (accessible button) */}
+        <button
+          onClick={toggleTheme}
+          className="text-3xl cursor-pointer text-white hover:text-gray-400 focus:outline-none"
+          title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+          aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          aria-pressed={theme === 'dark'}
+        >
+          {theme === 'dark' ? <CiLight /> : <CiDark />}
+        </button>
         </div>
   
         {/* Center: Logo */}
         <div id="logo" className="absolute left-1/2 -translate-x-1/2">
-          <img className="h-10 w-14" src={logo} alt="logo" />
+          <img loading="lazy" className="h-10 w-14" src={logo} alt="logo" />
         </div>
   
         {/* Left: Theme Toggle */}
@@ -71,3 +67,8 @@ const Navbar = ({ toggleTheme, theme }) => {
   
 
 export default Navbar;
+
+Navbar.propTypes = {
+  toggleTheme: PropTypes.func.isRequired,
+  theme: PropTypes.string,
+};

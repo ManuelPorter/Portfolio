@@ -1,5 +1,6 @@
 import { HERO_CONTENT } from "../constants";
 import about from "../assets/about.jpg";
+import PropTypes from 'prop-types';
 
 const Hero = ({ theme }) => {
   return (
@@ -42,3 +43,7 @@ const Hero = ({ theme }) => {
 };
 
 export default Hero;
+
+Hero.propTypes = {
+  theme: PropTypes.string,
+};
