@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Technologies from "./components/Technologies";
 import Experience from "./components/Experience";
+import Projects from "./components/Projects";
 import { RedSvg } from "./components/anim/redSvg";
 import { ReaSvg } from "./components/anim/reaSvg";
 import { JavSvg } from "./components/anim/javSvg";
@@ -72,6 +73,9 @@ const App = () => {
       </div>
       <div >
       <Experience theme={theme} />
+      </div>
+      <div>
+      <Projects theme={theme} />
       </div>
     </div>
   );
