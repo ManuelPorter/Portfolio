@@ -1,5 +1,5 @@
 React Portfolio with Vite & Java Backend
-Failed to load imageView link 
+
 A modern, responsive personal portfolio website built with React and Vite for the frontend, connected to a Java-based backend API to dynamically fetch and display projects. This setup showcases my full-stack development skills, with the frontend handling UI/UX and the backend managing project data persistence and retrieval.
 The portfolio highlights key projects with descriptions, tech stacks, live demos, and GitHub links, pulled in real-time from the backend for easy updates without redeploying the frontend.
 Features
