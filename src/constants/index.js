@@ -51,7 +51,7 @@ export const PROJECTS = [
     title: "E-Commerce product page",
     image: project3,
     description:
-      "a key component of an online store, showcasing individual products with detailed information to encourage customer engagement and purchases.",
+      "A key component of an online store, showcasing individual products with detailed information to encourage customer engagement and purchases.",
     technologies: ["TypeScript", "React", "NodeJS", "ExpressJS", "PostgreSQL", "Stripe API"],
   },
   {
@@ -73,5 +73,10 @@ export const PROJECTS = [
 export const CONTACT = {
   address: "Guadalajara, Jalisco, MX",
   phoneNo: "+52 744 115 9615",
-  email: "manuelporterll@gmail.com",
+  // WhatsApp numbers (international format, no spaces for the wa.me link)
+  whatsapp: [
+    { display: "+52 744 115 9615", link: "https://wa.me/527441159615" }
+  ],
+  whatsappCA: "+1 778 900 8682",
+  email: "jomporty@gmail.com",
 };
