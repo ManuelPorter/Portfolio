@@ -3,9 +3,9 @@ import { PROJECTS } from '../constants';
 
 const Projects = ({ theme }) => {
   return (
-    <section id="projectsSection" className="mt-16 pt-6 pb-12 px-4 sm:px-6 lg:px-20">
+  <section id="projectsSection" className="mt-24 md:mt-60 pt-6 pb-12 px-4 sm:px-6 lg:px-20">
       <div className="max-w-7xl mx-auto">
-        <h2 className={`${theme === 'dark' ? 'text-neutral-200' : 'text-gray-700'} text-3xl lg:text-5xl font-bold text-center mb-10`}>
+        <h2 className={`${theme === 'dark' ? 'text-neutral-200' : 'text-gray-700'} text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-10`}>
           Projects
         </h2>
 

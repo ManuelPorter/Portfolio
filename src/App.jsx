@@ -5,6 +5,7 @@ import About from "./components/About";
 import Technologies from "./components/Technologies";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 import { RedSvg } from "./components/anim/redSvg";
 import { ReaSvg } from "./components/anim/reaSvg";
 import { JavSvg } from "./components/anim/javSvg";
@@ -77,6 +78,9 @@ const App = () => {
       <div>
       <Projects theme={theme} />
       </div>
+  <div>
+  <Contact theme={theme} />
+  </div>
     </div>
   );
 };
